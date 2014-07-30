@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-wsmh-app' ]; then cd .. && eval "mv $currentfolder generator-wsmh-app" && cd generator-wsmh-app; fi
+
