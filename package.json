@@ -1,7 +1,7 @@
 {
   "name": "generator-wsmh-app",
-  "version": "1.0.2",
-  "description": "Yeoman generator",
+  "version": "1.0.4",
+  "description": "Yeoman generator containing my awesome web app template",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "whostolemyhat/generator-wsmh-app",

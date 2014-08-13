@@ -83,6 +83,8 @@ module.exports = function(grunt) {
 
         jshint: {
             options: {
+                // carry on even if there's warnings ie Warn only
+                force: true,
                 jshintrc: '.jshintrc',
                 reporter: require('jshint-summary')
             },
