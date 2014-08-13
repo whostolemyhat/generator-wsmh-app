@@ -10,7 +10,7 @@ Web app generator for Yeoman. Constructs a standard boilerplate for webapps incl
 ##What does it do?
 Scaffolds a boilerplate web app template. To run the gruntfile, you will need the following installed:
 3. [Grunt](http://gruntjs.com/getting-started) (npm install -g grunt-cli)
-3. Ruby [Windows installer](http://rubyinstaller.org/downloads/)
+3. Ruby ([Windows installer](http://rubyinstaller.org/downloads/))
 4. [Sass](http://sass-lang.com/) (gem install sass)
 
 ##Usage
