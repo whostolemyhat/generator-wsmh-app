@@ -10,7 +10,8 @@ module.exports = function(grunt) {
 
         watch: {
             options: {
-                spawn: false
+                spawn: false,
+                livereload: true
             },
 
             watchsass: {
@@ -65,10 +66,11 @@ module.exports = function(grunt) {
         clean: [ '<%= app %>/build/' ],
 
         tag: {
-            banner: '/* <%= pkg.name %>\n*/' +
-                    '/* v<%= pkg.version %>\n*/' +
-                    '/* <%= pkg.author %>\n*/' +
-                    '/* Last updated: <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+            banner: '/* <%= pkg.name %>*/\n' +
+                   '/* v<%= pkg.version %>*/\n' +
+                   '/* <%= pkg.author %>*/\n' +
+                   '/* Last updated: <%= grunt.template.today("dd-mm-yyyy") %> */\n' +
+                   '/* This is a generated file: any changes made here will be lost. */\n'
         },
 
         uglify: {
@@ -97,8 +99,7 @@ module.exports = function(grunt) {
         connect: {
             options: {
                 port: 9000,
-                livereload: 35729,
-                hostname: 'localhost',
+                livereload: 35729
             },
             livereload: {
                 options: {
@@ -109,6 +110,6 @@ module.exports = function(grunt) {
 
     });
 
-    grunt.registerTask('default', ['connect:livereload', 'watch']);
+    grunt.registerTask('default', ['sass:dev', 'connect:livereload', 'watch']);
     grunt.registerTask('build', ['jshint', 'clean', 'uglify', 'sass:prod']);
 };
